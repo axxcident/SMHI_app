@@ -31,9 +31,10 @@ const router = useRouter();
 const previewCity = (searchResult) => {
   console.log(searchResult)
   const [city, state, country] = searchResult.place_name.split(",");
+
   router.push({
     name: "cityView",
-    params: { city: city, country: country.trim() },
+    params: { city: city.trim(), country: country.trim() },
     query: {
       lat: searchResult.geometry.coordinates[1],
       lng: searchResult.geometry.coordinates[0],
@@ -68,7 +69,3 @@ const getSearchResults = () => {
   }, 300);
 };
 </script>
-
-<style lang="scss" scoped>
-
-</style>
