@@ -11,7 +11,7 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/weather/:state/:city',
+      path: '/weather/:city/:country',
       name: 'cityView',
       component: CityView
     }
@@ -19,3 +19,10 @@ const router = createRouter({
 })
 
 export default router
+
+
+// {                                      enligt video.
+//   path: '/weather/:state/:city',
+//   name: 'cityView',
+//   component: CityView
+// }
